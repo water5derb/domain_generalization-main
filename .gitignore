@@ -1,0 +1,59 @@
+__pycache__/
+*.pyc
+
+ESC-10/
+ESC-50/
+data/
+extracted_features_esc_10/
+extracted_features_esc_50/
+saved_results_esc_10/
+saved_results_esc_50/
+
+*.h5
+*.pt
+*.pth
+*.npy
+*.npz
+
+.DS_Store# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+.ipynb_checkpoints
+.vscode/
+.idea/
+__pycache__/
+venv/
+data/
+saved_models/
+notebooks/pretrained_models/
+pretrained_models/
+extracted_features/
+extracted_features_esc_50/
+extracted_features_esc_10/
+notebooks/
+
+
+
+# Files
+*.wav
+*.ckpt
+*.yaml
+*.csv
+*.h5
+*.out
+notebooks/Metrics.ipynb
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
