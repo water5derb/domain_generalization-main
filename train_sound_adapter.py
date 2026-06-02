@@ -74,7 +74,7 @@ def train(domain, model_type="cnn_deep"):
         feat_path=training_params.feat_path,
         csv_path=training_params.train_csv_loc,
         domain=domain,
-        esc_10=training_params.esc_10,
+        esc_10=training_params.esc_10,   #说是这里不用改
         shuffle=True
     )
     val_loader = load_data(
@@ -82,7 +82,7 @@ def train(domain, model_type="cnn_deep"):
         feat_path=training_params.feat_path,
         csv_path=training_params.val_csv_loc,
         domain=domain,
-        esc_10=training_params.esc_10,
+        esc_10=training_params.esc_10,    #说是这里不用改
         shuffle=False
     )
     test_loader = load_data(
@@ -90,7 +90,7 @@ def train(domain, model_type="cnn_deep"):
         feat_path=training_params.feat_path,
         csv_path=training_params.test_csv_loc,
         domain=domain,
-        esc_10=training_params.esc_10,
+        esc_10=training_params.esc_10,      #说是这里不用改
         shuffle=False
     )
     criterion = nn.CrossEntropyLoss()

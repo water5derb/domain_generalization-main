@@ -1,6 +1,6 @@
 class DataLocations:
     esc_10 = "./ESC-10"
-    sound_adapter = "./data/sound_adapter"
+    sound_adapter = "/hdd/subrata/domain_generalization/data/sound_adapter" #"./data/sound_adapter"
     esc_50 = "./ESC-50"
 
 
@@ -26,7 +26,8 @@ class FeatureParams:
 
 class TrainingParams:
     feat_path = "./extracted_features_esc_50"
-    save_path = "./saved_results_esc_50"
+    save_path = "./saved_results_esc_50"       
+    ####save path每次要改
     model_name = "sound_adpater_trained_on_domain_1_cnn_model_deep.h5"
     train_csv_loc = "./train.csv"
     val_csv_loc = "./val.csv"
@@ -35,4 +36,4 @@ class TrainingParams:
     batch_size = 32
     lr = 1e-3
     max_epoch = 300
-    esc_10 = True
+    esc_10 = False
