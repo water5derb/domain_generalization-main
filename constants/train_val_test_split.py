@@ -4,7 +4,9 @@ import pandas as pd
 
 class Split:
     def __init__(self):
+        #self.filename = "./class_domain_label_subra.csv"
         self.filename = "./data/ESC-50/class_domain_label.csv"
+        #self.filename = "./class_domain_label.csv"
         self.df = pd.read_csv(self.filename)
         self.train_df = pd.DataFrame()
         self.val_df = pd.DataFrame()
@@ -54,9 +56,9 @@ class Split:
         self.train_df = self.train_df.sample(frac=1).reset_index(drop=True)
         self.val_df = self.val_df.sample(frac=1).reset_index(drop=True)
         self.test_df = self.test_df.sample(frac=1).reset_index(drop=True)
-        self.train_df.to_csv("./data/ESC-50/train.csv", index=False)
-        self.val_df.to_csv("./data/ESC-50/val.csv", index=False)
-        self.test_df.to_csv("./data/ESC-50/test.csv", index=False)
+        self.train_df.to_csv("./train.csv", index=False)
+        self.val_df.to_csv("./val.csv", index=False)
+        self.test_df.to_csv("./test.csv", index=False)
         print(f'Train split: {self.train_df.shape}')
         print(f'Validation split: {self.val_df.shape}')
         print(f'Test split: {self.test_df.shape}')

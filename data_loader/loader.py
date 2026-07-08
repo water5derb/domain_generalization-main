@@ -21,7 +21,8 @@ class CustomLoader(Dataset):
         return len(self.info_list)
 
     def __getitem__(self, item):
-        # _, class_label, domain_label, folder, name, _ = self.info_list[item]  # uncoment for ESC-50
+        _, class_label, domain_label, folder, name, _ = self.info_list[item]  # uncoment for ESC-50
+        #_, class_label, domain_label, folder, name = self.info_list[item]##
         _, class_label, domain_label, folder, name, esc10 = self.info_list[item] # uncomment for sound_adapter
         feat_loc = os.path.join(self.feat_path, str(folder), '{}.npy'.format(name.split(".")[0]))
         feat = np.load(feat_loc)

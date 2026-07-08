@@ -62,7 +62,7 @@ def test(domain_trained_on):
             feat_path=training_params.feat_path,
             csv_path=training_params.test_csv_loc,
             domain=domain,
-            esc10=training_params.esc_10,   ##这里不用改
+            esc_10=training_params.esc_10,   ##这里不用改
             shuffle=False
         )
         model.load_state_dict(torch.load(os.path.join(training_params.save_path, model_name), map_location='cpu'))

@@ -48,7 +48,9 @@ class ExtractFeature:
             with tqdm(total=folder_df.shape[0], desc=f'Folder: {folder}') as pbar:
                 for _, row in folder_df.iterrows():
                     pbar.update(1)
-                    audio_path = os.path.join(self.data_loc, str(folder), "mqtt_rec1", row["name"]) # remove mqtt_rec1 for ESC-50
+                    #folder_num = str(folder).replace('domain_', '').lstrip('0') or '1'         #audio_path = os.path.join(self.data_loc, str(folder), "mqtt_rec1", row["name"])
+                    #audio_path = os.path.join(self.data_loc, folder_num, "mqtt_rec", row["name"])   #audio_path = os.path.join(self.data_loc, str(folder), "mqtt_rec1", row["name"])
+                    audio_path = os.path.join(self.data_loc, str(folder), "mqtt_rec1", row["name"])
                     spectrogram = self.get_spectrogram(audio_path=audio_path)
                     feat_path = os.path.join(folder_path, '{}.npy'.format(row["name"].split(".")[0]))
                     np.save(feat_path, spectrogram)

@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 class DataLocations:
     esc_10 = "./ESC-10"
-    sound_adapter = "/hdd/subrata/domain_generalization/data/sound_adapter" #"./data/sound_adapter"
+    #sound_adapter = "/hdd/subrata/domain_generalization/data/sound_adapter" 
+    sound_adapter = "./data/sound_adapter"
     esc_50 = "./ESC-50"
 
 
@@ -17,6 +19,7 @@ class FeatureParams:
     hop_len = 256
     win_len = 2 * hop_len
     nfft = 1024
+    #label_df_loc = "./class_domain_label_subra.csv" 
     label_df_loc = "./class_domain_label.csv"
     save_loc = "./extracted_features_esc_50"
     train_csv_loc = "./train.csv"
@@ -26,7 +29,7 @@ class FeatureParams:
 
 class TrainingParams:
     feat_path = "./extracted_features_esc_50"
-    save_path = "./saved_results_esc_50"       
+    save_path = "./saved_results_esc50_old"       
     ####save path每次要改
     model_name = "sound_adpater_trained_on_domain_1_cnn_model_deep.h5"
     train_csv_loc = "./train.csv"
